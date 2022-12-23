@@ -1,6 +1,6 @@
 # CreditStake
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+爬取银卡优惠信息生成接口。restful, graphql
 
 ## Learn more
 
@@ -50,15 +50,14 @@ mix run priv/repo/seeds.exs
 ```shell
 mix phx.server
 iex -S mix phx.server
+MIX_ENV=prod mix phx.server
 ```
 
 ### Deploy Docker
 ```shell
 mix phx.gen.release --docker
 mix phx.gen.secret
-
-ENV SECRET_KEY_BASE="x1jq8T5ik/2A34D0qKxDPEC70D2O4pmLqY9eB3OEvgdG+OEsm/28j6kPSRR1EJng"
-ENV DATABASE_URL="ecto://USER:PASS@HOST/credit_stake"
+mix phx.digest
 
 docker build . -t credit_stake
 docker run --rm --name credit_stake_1 credit_stake
@@ -95,3 +94,4 @@ http://127.0.0.1:4000/dashboard
 * defprotocol
 * defimpl
 * defmacro
+* https://hexdocs.pm/phoenix/deployment.html

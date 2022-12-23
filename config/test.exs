@@ -6,12 +6,11 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :credit_stake, CreditStake.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "credit_stake_test#{System.get_env("MIX_TEST_PARTITION")}",
+  username: "menghuanwd",
+  password: "password",
+  hostname: "127.0.0.1",
+  database: "credit_stake_test",
   pool: Ecto.Adapters.SQL.Sandbox,
-  port: "5501",
   pool_size: 10
 
 # We don't run a server during test. If one is required,

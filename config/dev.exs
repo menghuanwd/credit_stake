@@ -2,12 +2,11 @@ import Config
 
 # Configure your database
 config :credit_stake, CreditStake.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "credit_stake_dev",
+  username: "menghuanwd",
+  password: "password",
+  hostname: "127.0.0.1",
+  database: "credit_stake",
   stacktrace: true,
-  port: "5501",
   show_sensitive_data_on_connection_error: true,
   pool_size: 45
 
