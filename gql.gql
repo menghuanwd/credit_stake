@@ -1,0 +1,24 @@
+{
+    banks {
+        id
+        name
+    },
+    articles {
+        id
+        title
+    },
+}
+
+{
+    bank(id: "a4066c8f-6e86-4360-b397-b261c48dcaa9") {
+        id
+        name
+    }
+}
+
+
+mutation CreateBank {
+    createBank(name: "test bank", crawler_url: "We're off to a great start!") {
+        id
+    }
+}
