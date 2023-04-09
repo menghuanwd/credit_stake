@@ -2,7 +2,7 @@ import Config
 
 # Configure your database
 config :credit_stake, CreditStake.Repo,
-  username: "menghuanwd",
+  username: "postgres",
   password: "password",
   hostname: "127.0.0.1",
   database: "credit_stake",
