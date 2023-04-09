@@ -8,13 +8,13 @@ defmodule CreditStakeWeb.BankController do
   action_fallback CreditStakeWeb.FallbackController
 
   def index(conn, params) do
-	  scrivener = Model.all(params)
-	
-	  render(conn, "index.json", scrivener: scrivener)
+    scrivener = Model.all(params)
+
+    render(conn, "index.json", scrivener: scrivener)
   end
 
   def create(conn, params) do
-	  IO.inspect params
+    IO.inspect params
     with {:ok, %Bank{} = bank} <- Model.create(params) do
       conn
       |> put_status(:created)

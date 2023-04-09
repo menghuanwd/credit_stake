@@ -1,7 +1,7 @@
 defmodule CreditStake.Database.Bank do
   use Ecto.Schema
   import Ecto.Changeset
-  
+
   alias CreditStake.Database.Article
 
   @primary_key {:id, :binary_id, autogenerate: true}
@@ -11,7 +11,7 @@ defmodule CreditStake.Database.Bank do
     field :crawler_url, :string
 
     timestamps(inserted_at: :created_at)
-    
+
     has_many :articles, Article
   end
 

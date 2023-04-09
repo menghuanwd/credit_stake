@@ -4,15 +4,16 @@
 
 ## Learn more
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+* Official website: https://www.phoenixframework.org/
+* Guides: https://hexdocs.pm/phoenix/overview.html
+* Docs: https://hexdocs.pm/phoenix
+* Forum: https://elixirforum.com/c/phoenix-forum
+* Source: https://github.com/phoenixframework/phoenix
 
 ## Usage
 
 ### Postgres
+
 ```shell
 docker run --name phoenix-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5501:5432 -d postgres
 ```
@@ -23,6 +24,7 @@ mix hex.config
 ```
 
 ### Commands
+
 ```shell
 mix local.hex
 mix archive.install hex phx_new
@@ -47,6 +49,7 @@ mix run priv/repo/seeds.exs
 ```
 
 ### Startup
+
 ```shell
 mix phx.server
 iex -S mix phx.server
@@ -54,6 +57,7 @@ MIX_ENV=prod mix phx.server
 ```
 
 ### Deploy Docker
+
 ```shell
 mix phx.gen.release --docker
 mix phx.gen.secret
@@ -68,6 +72,7 @@ docker run --rm --name credit_stake_1 credit_stake
 services/crawler
 
 ### Format
+
 ```shell
 mix format
 mix credo
@@ -75,11 +80,13 @@ mix credo list
 ```
 
 ### Dashboard
+
 ```shell
 http://127.0.0.1:4000/dashboard
 ```
 
 ### Swagger
+
 ```shell
   mix phx.swagger.generate
 ```

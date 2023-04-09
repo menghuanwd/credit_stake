@@ -14,7 +14,7 @@ defmodule CreditStakeWeb.ArticleController do
 		    swagger_schema do
 			    title("RequestArticle")
 			    description("A article of the app")
-			
+
 			    properties do
 				    title(:string, "Article title", required: true)
 				    bank_id(:uuid, "Bank ID", required: true)
@@ -22,7 +22,7 @@ defmodule CreditStakeWeb.ArticleController do
 				    content(:string, "Article Content", required: true)
 				    published_at(:string, "Article published at", required: true)
 			    end
-			
+
 			    example(%{
 				    bank_id: "088dfd10-855b-48fa-8d97-d687ec0f174a",
 				    title: "dave",
